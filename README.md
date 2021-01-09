@@ -164,15 +164,37 @@ f   dw  5d12h
 Note: if variables are defined like what we saw above, they are going to be stored in Code Segment (CS).
 
 
-Note: constants can be defined with "equ" keyword. Also, they are not stored anyware.
+Note: constants can be defined with "equ" keyword. Also, they are not stored anywhere.
 
 ```
 C   equ 3f12h
 ```
 
-#### 6 - Assembly program samples
+#### 6 - Basic assembly program samples
 ##### 1- [View here what is traditional in writing an assembly program](01-basic-instructions/04-sample1.asm)
+
 ##### 2 - [View here the simplified version of the previous one](01-basic-instructions/05-sample2.asm)
-##### 3 - [Example of using loop for adding four numbers](01-01-basic-instructions/06-loop-for-adding.asm)
+
+##### 3 - [Example of using loop for adding four numbers](01-basic-instructions/06-loop-for-adding.asm)
+
 ##### 4 - [Example of using for adding four numbers using BX:AX for the result](01-basic-instructions/07-adding-more.asm)
 
+##### 5 - [Example of multiplying two bytes](01-basic-instructions/08-multiplying-two-bytes.asm)
+
+##### 6 - [Example of multiplying two words](01-basic-instructions/../01-basic-instructions/09-multiplying-two-words.asm)
+
+##### 7 - [Example of multiplying a byte and a word](01-basic-instructions/10-multiplying-byte-word.asm)
+
+##### 8 - [Example of dividing a byte by another byte](01-basic-instructions/11-divide-byte-to-byte.asm)
+
+##### 9 - [Example of dividing a word by another word](01-basic-instructions/12-divide-word-by-word.asm)
+
+##### 10 - [Example of dividing a word by a byte](01-basic-instructions/13-divide-word-by-byte.asm)
+
+##### 11 - [Example of logic instructions](01-basic-instructions/14-bit-operations.asm)
+
+##### 12 - [Maximum of three number](01-basic-instructions/15-maximum.asm)
+
+##### 13 - [If implementation in Assembly](01-basic-instructions/16-if-in-assembly.asm)
+
+### BCD Numbers
