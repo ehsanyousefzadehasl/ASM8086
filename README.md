@@ -198,3 +198,16 @@ C   equ 3f12h
 ##### 13 - [If implementation in Assembly](01-basic-instructions/16-if-in-assembly.asm)
 
 ### BCD Numbers
+BCD stands for Binary-Coded Decimal. In this coding system, we try to code each decimal digit with 4 bits. The following [figure](https://examradar.com/codes-and-parity/) shows what the BCD system is.
+
+![BCD coding system](imgs/bcd.png)
+
+BCD coding system's most important application is in counters. For example, with the help of a SN74LS47 chip, we can build a counter on a seven segment. For example, in the following figure if we replace the dip switch with a counter, we can build a counter (BCD one) which is shown on a seven segment.
+
+![BCD counter like](imgs/counter-like.jpg)
+
+On the other side, BCD system needs more electronics to do BCD arithmetic in hardware, thus it is much slower than binary arithmetic. Also, It wastes memory storage (every 4 bits for each digit).
+
+Some example assembly programs for dealing with BCD codes.
+
+##### 1 - [String to a BCD]()
