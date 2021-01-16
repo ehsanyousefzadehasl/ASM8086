@@ -210,4 +210,4 @@ On the other side, BCD system needs more electronics to do BCD arithmetic in har
 
 Some example assembly programs for dealing with BCD codes.
 
-##### 1 - [String to a BCD]()
+##### 1 - [String to a BCD](02-BCD/01-string-to-BCD.asm)
