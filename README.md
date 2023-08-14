@@ -89,7 +89,7 @@ By introduction of i386, 32-bit registers were added to the architecture of the 
 Using pipeline method for increasing the performance of processors started to adopted from 8086. 8085 processor was a non-pipelined one.
 
 ### Basics
-You can see the following codes by clicking on them. Use a emu8086 to see the registers and other states of the processor to gain a vision on how x86 processors work
+You can see the following codes by clicking on them. Use the emu8086 emulator to see the registers and other states of the processor to gain a vision on how x86 processors work
 
 #### 1 - [mov destination, source](01-basic-instructions/01-mov-instruction.asm)
 
@@ -210,4 +210,28 @@ On the other side, BCD system needs more electronics to do BCD arithmetic in har
 
 Some example assembly programs for dealing with BCD codes.
 
-##### 1 - [String to a BCD](02-BCD/01-string-to-BCD.asm)
+##### 1 - [String to BCD](02-BCD/01-string-to-BCD.asm)
+##### 2 - [ASCII to BCD](02-02-BCD/02-ASCII-to-BCD.asm)
+
+## How to use Visual Studio for running x86 assembly code
+First of all, create an empty project with MASM name. Then, remove the header, resource, and source folders. Then, right click on the project and select build dependencies, and then in the opened window check the masm. After that, right click again and go to the properties. In properties window, navigate to Configuration Properties -> Linker -> System, and there select Windows for subsystem. Then, we are going to make it a template to be able make assembly programs. Them, right click again, and add a new file with .asm extension like main.asm. Then, fill you recently made file with the following code:
+```assembly
+.386
+.model flat, stdcall
+.stack 4096
+
+ExitProcess PROTO, dwExitCode: DWORD
+
+.data
+      ; define your variables here
+.code
+
+main PROC
+      ; write your assembly code here
+
+      INVOKE ExitProcess, 0
+main ENDP
+END main
+```
+Then, go to the project tap in the navbar of Visual Studio, click Export Template, and save on defaults. After this moment, whenever we make a project, we will see the option of MASM in the project make window. After debugging the written assembly code, if you right click on the source and select run to cursor, the rigisters will shown. Also, Debug -> Windows -> Registers is another alternative to see the registers.
+
